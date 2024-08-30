@@ -70,19 +70,22 @@ async def read_root():
             <p>&copy; 2024 Pediculosis y Parasitismo. Todos los derechos reservados.</p>
         </footer>
 
-        <!-- Widget de Telegram en la parte inferior derecha -->
-        <div class="widget-telegram" style="display: none;">
+        <!-- Icono de Telegram para abrir el chat -->
+        <div class="widget-telegram">
+            <button class="telegram-button" onclick="openTelegramChat()">
+                <i class="fab fa-telegram"></i>
+            </button>
+        </div>
+        
+        <!-- Ocultar el widget por defecto -->
+        <div id="telegram-widget" style="display: none;">
             <script async src="https://telegram.org/js/telegram-widget.js?22"
                 data-telegram-login="Comfabot"
                 data-size="large"
                 data-auth-url="/auth"
                 data-request-access="write">
             </script>
-            
-            <!-- Botón con icono de Telegram -->
-            <button class="telegram-button" onclick="openTelegramChat()">
-                <i class="fab fa-telegram fa-2x"></i> <!-- Icono de Telegram -->
-            </button>
+        </div>
 
         <script type="text/javascript">
             function openTelegramChat() {
