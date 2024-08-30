@@ -72,7 +72,7 @@ async def read_root():
             <script async src="https://telegram.org/js/telegram-widget.js?22"
                 data-telegram-login="Comfabot"
                 data-size="large"
-                data-auth-url="/https://telegram-bot-web-pp.onrender.com/auth"
+                data-auth-url="/auth"
                 data-request-access="write">
             </script>
             <script type="text/javascript">
