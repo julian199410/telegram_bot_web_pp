@@ -76,6 +76,14 @@ async def read_root():
                 data-auth-url="/auth"
                 data-request-access="write">
             </script>
+            
+            <!-- Incrustar el widget de chat -->
+            <iframe
+                src="https://web.telegram.org/a/#@Comfabot"  <!-- Enlace del bot, reemplaza "Comfabot" por el nombre de tu bot -->
+                width="100%"
+                height="600px"
+                style="border:none;">
+            </iframe>
             <script type="text/javascript">
                 function onTelegramAuth(user) {
                     alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
