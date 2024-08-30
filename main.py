@@ -77,13 +77,15 @@ async def read_root():
                 data-request-access="write">
             </script>
             
-            <!-- Incrustar el widget de chat -->
-            <iframe
-                src="https://web.telegram.org/a/#@Comfabot"  <!-- Enlace del bot, reemplaza "Comfabot" por el nombre de tu bot -->
-                width="100%"
-                height="600px"
-                style="border:none;">
-            </iframe>
+        <!-- Botón para abrir chat en ventana emergente -->
+        <button onclick="openTelegramChat()">Chatear con nuestro bot</button>
+
+        <script type="text/javascript">
+            function openTelegramChat() {
+                var botUrl = "https://t.me/Comfabot"; // URL de tu bot en Telegram
+                window.open(botUrl, "popup", "width=400,height=600");
+            }
+        </script>
             <script type="text/javascript">
                 function onTelegramAuth(user) {
                     alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
