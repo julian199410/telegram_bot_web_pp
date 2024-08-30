@@ -71,7 +71,7 @@ async def read_root():
         </footer>
 
         <!-- Widget de Telegram en la parte inferior derecha -->
-        <div class="widget-telegram">
+        <div class="widget-telegram" style="display: none;">
             <script async src="https://telegram.org/js/telegram-widget.js?22"
                 data-telegram-login="Comfabot"
                 data-size="large"
@@ -98,6 +98,7 @@ async def read_root():
         </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Librería de iconos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>

@@ -98,6 +98,7 @@ footer {
 
 .telegram-button i {
     color: #0088cc; /* Color azul de Telegram */
+    font-size: 40px;
     transition: color 0.3s ease;
 }
 
