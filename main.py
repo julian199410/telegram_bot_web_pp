@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
+from fastapi.responses import RedirectResponse
 from starlette.middleware.cors import CORSMiddleware
 import os
 from dotenv import load_dotenv
@@ -103,9 +104,15 @@ async def read_root():
 
 
 @app.get("/auth")
-async def auth():
-    # Este endpoint puede ser usado para manejar la autenticación de usuarios.
-    return HTMLResponse(content="<p>Autenticación completada.</p>")
+async def auth(request: Request):
+    query_params = request.query_params
+    if "hash" not in query_params:
+        raise HTTPException(status_code=400, detail="Missing hash parameter")
+
+    # Si la autenticación es correcta, redirige al chat de Telegram
+    bot_username = "Comfabot"  # Reemplaza con el nombre de tu bot
+    telegram_url = f"https://t.me/{bot_username}"
+    return RedirectResponse(url=telegram_url)
 
 
 if __name__ == "__main__":
