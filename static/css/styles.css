@@ -83,6 +83,28 @@ footer {
     z-index: 10; /* Asegúrate de que el widget esté por encima del pie de página */
 }
 
+/* Botón de Telegram con icono */
+.telegram-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.telegram-button i {
+    color: #0088cc; /* Color azul de Telegram */
+    transition: color 0.3s ease;
+}
+
+.telegram-button:hover i {
+    color: #005f8c; /* Cambia el color al pasar el mouse */
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .info {

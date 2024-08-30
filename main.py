@@ -35,6 +35,8 @@ async def read_root():
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+     <!-- Añadir enlace a Font Awesome para usar iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="dashboard">
@@ -77,8 +79,10 @@ async def read_root():
                 data-request-access="write">
             </script>
             
-        <!-- Botón para abrir chat en ventana emergente -->
-        <button onclick="openTelegramChat()">Chatear con nuestro bot</button>
+            <!-- Botón con icono de Telegram -->
+            <button class="telegram-button" onclick="openTelegramChat()">
+                <i class="fab fa-telegram fa-2x"></i> <!-- Icono de Telegram -->
+            </button>
 
         <script type="text/javascript">
             function openTelegramChat() {
