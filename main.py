@@ -69,11 +69,16 @@ async def read_root():
 
         <!-- Widget de Telegram en la parte inferior derecha -->
         <div class="widget-telegram">
-            <script async src="https://telegram.org/js/telegram-widget.js?7"
+            <script async src="https://telegram.org/js/telegram-widget.js?22"
                 data-telegram-login="Comfabot"
                 data-size="large"
-                data-auth-url="/auth"
+                data-auth-url="/https://telegram-bot-web-pp.onrender.com/"
                 data-request-access="write">
+            </script>
+            <script type="text/javascript">
+                function onTelegramAuth(user) {
+                    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+                }
             </script>
         </div>
     </div>
