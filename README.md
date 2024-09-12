@@ -23,6 +23,7 @@ Este proyecto integra un bot de Telegram en una página web utilizando FastAPI.
 
 # Run Project
    uvicorn main:app --reload
+   uvicorn main:app --reload --port 7000
 
 # Para correr con serveo
    - ssh -R 80:localhost:5000 serveo.net

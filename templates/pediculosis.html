@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pediculosis y Parasitismo</title>
+    <title>Pediculosis</title>
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,7 +12,10 @@
 <body>
     <div class="dashboard">
         <header>
-            <!-- Encabezado con logo -->
+            <!-- <div class="logo-container">
+                <img src="/static/images/logo.png" alt="Logo de la página" class="logo">
+            </div> -->
+            <!-- <h1>Pediculosis & <br> Parasitismo</h1> -->
         </header>
 
         <div class="content">
@@ -30,13 +33,14 @@
 
             <!-- Contenido principal -->
             <section class="main-content">
-                <h2>Información general</h2>
-                <p>El <strong>Sistema de gestión de Pediculosis y Parasitismo</strong> permite administrar información
-                    sobre estos temas, a través de una interfaz amigable.</p>
-                <p>Incluye secciones sobre Pediculosis, Parasitismo, síntomas y prevención.</p>
+                <h2>¿Qué es la Pediculosis?</h2>
+                <p>La pediculosis es una infestación por piojos que afecta principalmente el cuero cabelludo, aunque
+                    también puede presentarse en otras zonas del cuerpo. Es un problema común en niños en edad escolar.
+                </p>
+                <p>En esta sección, encontrarás información sobre los síntomas, el tratamiento y la prevención de la
+                    pediculosis.</p>
             </section>
         </div>
-
 
         <!-- Pie de página -->
         <footer>
@@ -58,33 +62,17 @@
 
         <div id="telegram-widget" style="display: none;">
             <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Comfabot"
-                data-size="large" data-auth-url="/auth" data-request-access="write"></script>
+                data-size="large" data-auth-url="/auth" data-request-access="write">
+                </script>
         </div>
 
-        <script>
+        <script type="text/javascript">
             function openTelegramChat() {
                 var botUrl = "https://t.me/Comfabot";
                 window.open(botUrl, "popup", "width=400,height=600");
             }
-
-            var swiper = new Swiper('.swiper-container', {
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-            });
         </script>
     </div>
-
 </body>
 
 </html>

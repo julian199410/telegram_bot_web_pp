@@ -3,17 +3,17 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi.responses import RedirectResponse
 from starlette.middleware.cors import CORSMiddleware
-import os
+from fastapi.templating import Jinja2Templates
 from dotenv import load_dotenv
 
 load_dotenv()
 
 app = FastAPI()
 
-# Configurar CORS si necesitas permitir solicitudes desde otros dominios
+# Configurar CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Cambia "*" a tus dominios permitidos
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -22,103 +22,23 @@ app.add_middleware(
 # Montar carpeta estática para servir CSS y otros archivos
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Configurar Jinja2Templates
+templates = Jinja2Templates(directory="templates")
+
 
 @app.get("/", response_class=HTMLResponse)
-async def read_root():
-    html_content = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pediculosis y Parasitismo</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-     <!-- Añadir enlace a Font Awesome para usar iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <div class="dashboard">
-        <header>
-            <div class="logo-container">
-                <img src="/static/images/logo.png" alt="Logo de la página" class="logo">
-                <h1>Pediculosis y Parasitismo</h1>
-            </div>
-        </header>
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
-        <div class="content">
-            <section class="info">
-                <h2>Bienvenido a nuestro sistema</h2>
-                <p>Consulta información sobre pediculosis y parasitismo.</p>
-            </section>
-            
-            <!-- Sliders -->
-            <section class="sliders">
-                <h2>Galería de Imágenes</h2>
-                <div class="slider">
-                    <div><img src="/static/images/pediculosis1.jpg" alt="Pediculosis 1"></div>
-                    <div><img src="/static/images/pediculosis2.jpg" alt="Pediculosis 2"></div>
-                    <div><img src="/static/images/parasitismo1.jpg" alt="Parasitismo 1"></div>
-                    <div><img src="/static/images/parasitismo2.jpg" alt="Parasitismo 2"></div>
-                </div>
-            </section>
-        </div>
 
-        <!-- Pie de página -->
-        <footer>
-            <p>&copy; 2024 Pediculosis y Parasitismo. Todos los derechos reservados.</p>
-        </footer>
+@app.get("/pediculosis", response_class=HTMLResponse)
+async def pediculosis_page(request: Request):
+    return templates.TemplateResponse("pediculosis.html", {"request": request})
 
-        <!-- Icono de Telegram para abrir el chat -->
-        <div class="widget-telegram">
-            <button class="telegram-button" onclick="openTelegramChat()">
-                <i class="fab fa-telegram"></i>
-            </button>
-        </div>
-        
-        <!-- Ocultar el widget por defecto -->
-        <div id="telegram-widget" style="display: none;">
-            <script async src="https://telegram.org/js/telegram-widget.js?22"
-                data-telegram-login="Comfabot"
-                data-size="large"
-                data-auth-url="/auth"
-                data-request-access="write">
-            </script>
-        </div>
 
-        <script type="text/javascript">
-            function openTelegramChat() {
-                var botUrl = "https://t.me/Comfabot"; // URL de tu bot en Telegram
-                window.open(botUrl, "popup", "width=400,height=600");
-            }
-        </script>
-            <script type="text/javascript">
-                function onTelegramAuth(user) {
-                    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-                }
-            </script>
-        </div>
-    </div>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Librería de iconos -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            });
-        });
-    </script>
-</body>
-</html>
-    """
-    return HTMLResponse(content=html_content)
+@app.get("/parasitismo", response_class=HTMLResponse)
+async def parasitismo_page(request: Request):
+    return templates.TemplateResponse("parasitismo.html", {"request": request})
 
 
 @app.get("/auth")
