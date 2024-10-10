@@ -33,9 +33,99 @@
                 <h2>Información general</h2>
                 <p>El <strong>Sistema de gestión de Pediculosis y Parasitismo</strong> permite administrar información
                     sobre estos temas, a través de una interfaz amigable.</p>
-                <p>Incluye secciones sobre Pediculosis, Parasitismo, síntomas y prevención.</p>
+
+                <!-- Carrusel con imágenes y contenido -->
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="/static/images/pediculosis2.jpg" alt="Pediculosis">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/static/images/parasitismo1.jpg" alt="Parasitismo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/static/images/parasitismo2.jpg" alt="Parasitismo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/static/images/pediculosis1.jpg" alt="Pediculosis">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prevButton">Anterior</button>
+                    <button class="carousel-button" id="nextButton">Siguiente</button>
+                </div>
             </section>
         </div>
+
+        <h2>Estadísticas de prevención</h2>
+        <section class="statistics">
+            <div class="stat-item">
+                <i class="fas fa-user-check"></i>
+                <h3>+100,000</h3>
+                <p>Casos tratados con éxito</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>90%</h3>
+                <p>Eficacia en prevención</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h3>50,000</h3>
+                <p>Consultas atendidas</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonial-item">
+                <p>"El tratamiento fue rápido y eficaz, mis hijos ya no sufren de pediculosis gracias a este sistema."
+                </p>
+                <h4>- María Gómez</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Aprendí a prevenir el parasitismo en mi comunidad. Gracias por la educación y el apoyo brindado."
+                </p>
+                <h4>- Carlos Ramírez</h4>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué es la pediculosis?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>La pediculosis es una infestación de piojos que afecta principalmente al cuero cabelludo, especialmente en niños en edad escolar.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cómo se previene el parasitismo?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>El parasitismo se previene mediante la higiene personal, manejo adecuado de alimentos y evitando el contacto con aguas contaminadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>Video Educativo</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/W08Gzx9uzBc" 
+                        title="Video educativo sobre Pediculosis y Parasitismo" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <a href="/contacto" class="cta-button">Contáctanos para más información</a>
+        </section>
 
 
         <!-- Pie de página -->
@@ -67,24 +157,65 @@
                 window.open(botUrl, "popup", "width=400,height=600");
             }
 
-            var swiper = new Swiper('.swiper-container', {
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
+            // Funcionalidad del carrusel
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            let currentSlide = 0;
+
+            // Botones de navegación
+            const nextButton = document.getElementById('nextButton');
+            const prevButton = document.getElementById('prevButton');
+
+            function updateSlidePosition() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            // Evento de clic para el botón "Siguiente"
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlidePosition();
+                resetInterval();  // Reinicia el temporizador al hacer clic
+            });
+
+            // Evento de clic para el botón "Anterior"
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlidePosition();
+                resetInterval();  // Reinicia el temporizador al hacer clic
+            });
+
+            // Función para el desplazamiento automático
+            let autoSlideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlidePosition();
+            }, 3000);  // Cambia cada 3 segundos
+
+            // Función para reiniciar el intervalo (después de cada clic manual)
+            function resetInterval() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlidePosition();
+                }, 3000);
+            }
+
+            // JavaScript para alternar la visibilidad de las respuestas y los iconos
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    question.classList.toggle('active'); // Alternar la clase activa
+                    const answer = question.nextElementSibling; // Obtener la respuesta
+
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none"; // Ocultar respuesta
+                        question.querySelector('.faq-icon').textContent = "+"; // Cambiar a +
+                    } else {
+                        answer.style.display = "block"; // Mostrar respuesta
+                        question.querySelector('.faq-icon').textContent = "-"; // Cambiar a -
+                    }
+                });
             });
         </script>
     </div>
-
 </body>
 
 </html>

@@ -6,6 +6,230 @@ body {
     color: #333;
 }
 
+        /* Estilos para el carrusel */
+        .carousel {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .carousel-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .carousel-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .carousel-button {
+            background-color: #10b3a0;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-button:hover {
+            background-color: #004d40;
+        }
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #f0f4f7;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 40px;
+    color: #10b3a0;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    color: #333;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos para el estadisticas */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #f0f4f7;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 40px;
+    color: #10b3a0;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    color: #333;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos para testimonios */
+.testimonials {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial-item {
+    margin-bottom: 20px;
+}
+
+.testimonial-item p {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-item h4 {
+    font-size: 16px;
+    color: #10b3a0;
+    margin-top: 10px;
+}
+
+/* Estilos para preguntas frecuentes */
+.faq {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    background-color: #10b3a0;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex; /* Flex para alinear icono y texto */
+    justify-content: space-between; /* Espaciado entre texto e icono */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.faq-icon {
+    font-size: 20px; /* Tamaño del icono */
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f0f4f7;
+    border-left: 3px solid #10b3a0;
+}
+
+.faq-question.active .faq-icon {
+    content: "-"; /* Cambiar icono a menos */
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+
+/* Estilos para el video educativo */
+.video {
+    text-align: center;
+    margin: 0px 0;
+}
+
+.video video {
+    border: 5px solid #10b3a0;
+}
+
+/* Estilos para el boton conoce más */
+.call-to-action {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-button {
+    background-color: #10b3a0;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #004d40;
+}
+
+.video {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #f0f4f7;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .dashboard {
     max-width: 1450px;
     margin: 0 auto;
@@ -218,14 +442,16 @@ footer p {
 }
 
 .telegram-button i {
-    color: #0088cc;
+    /* color: #0088cc; */
+    color: #000000;
     /* Color azul de Telegram */
     font-size: 40px;
     transition: color 0.3s ease;
 }
 
 .telegram-button:hover i {
-    color: #005f8c;
+    /* color: #005f8c; */
+    color: #0088cc;
     /* Cambia el color al pasar el mouse */
 }
 
