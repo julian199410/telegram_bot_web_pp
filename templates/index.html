@@ -1,68 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pediculosis y Parasitismo</title>
     <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="dashboard">
         <header>
-            <div class="logo-container">
-                <img src="/static/images/logo.png" alt="Logo de la página" class="logo">
-                <h1>Pediculosis y Parasitismo</h1>
-            </div>
+            <!-- Encabezado con logo -->
         </header>
 
         <div class="content">
-            <section class="info">
-                <h2>Bienvenido a nuestro sistema</h2>
-                <p>Consulta información sobre pediculosis y parasitismo.</p>
-            </section>
-            
-            <!-- Sliders -->
-            <section class="sliders">
-                <h2>Galería de Imágenes</h2>
-                <div class="slider">
-                    <div><img src="/static/images/pedi640.jpg" alt="Pediculosis 1"></div>
-                    <div><img src="/static/images/pediculosis2.jpg" alt="Pediculosis 2"></div>
-                    <div><img src="/static/images/parasitismo1.jpg" alt="Parasitismo 1"></div>
-                    <div><img src="/static/images/parasitismo2.jpg" alt="Parasitismo 2"></div>
+            <!-- Menú lateral -->
+            <nav class="sidebar">
+                <h2>Temas</h2>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/pediculosis">Pediculosis</a></li>
+                    <li><a href="/parasitismo">Parasitismo</a></li>
+                    <li><a href="#">Síntomas</a></li>
+                    <li><a href="#">Prevención</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contenido principal -->
+            <section class="main-content">
+                <h2>Información general</h2>
+                <p>El <strong>Sistema de gestión de Pediculosis y Parasitismo</strong> permite administrar información
+                    sobre estos temas, a través de una interfaz amigable.</p>
+
+                <!-- Carrusel con imágenes y contenido -->
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="/static/images/pediculosis2.jpg" alt="Pediculosis">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/static/images/parasitismo1.jpg" alt="Parasitismo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/static/images/parasitismo2.jpg" alt="Parasitismo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/static/images/pediculosis1.jpg" alt="Pediculosis">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prevButton">Anterior</button>
+                    <button class="carousel-button" id="nextButton">Siguiente</button>
                 </div>
             </section>
         </div>
 
+        <h2>Estadísticas de prevención</h2>
+        <section class="statistics">
+            <div class="stat-item">
+                <i class="fas fa-user-check"></i>
+                <h3>+100,000</h3>
+                <p>Casos tratados con éxito</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>90%</h3>
+                <p>Eficacia en prevención</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h3>50,000</h3>
+                <p>Consultas atendidas</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonial-item">
+                <p>"El tratamiento fue rápido y eficaz, mis hijos ya no sufren de pediculosis gracias a este sistema."
+                </p>
+                <h4>- María Gómez</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Aprendí a prevenir el parasitismo en mi comunidad. Gracias por la educación y el apoyo brindado."
+                </p>
+                <h4>- Carlos Ramírez</h4>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué es la pediculosis?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>La pediculosis es una infestación de piojos que afecta principalmente al cuero cabelludo, especialmente en niños en edad escolar.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cómo se previene el parasitismo?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>El parasitismo se previene mediante la higiene personal, manejo adecuado de alimentos y evitando el contacto con aguas contaminadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>Video Educativo</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/W08Gzx9uzBc" 
+                        title="Video educativo sobre Pediculosis y Parasitismo" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <a href="/contacto" class="cta-button">Contáctanos para más información</a>
+        </section>
+
+
         <!-- Pie de página -->
         <footer>
             <p>&copy; 2024 Pediculosis y Parasitismo. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </footer>
 
-        <!-- Widget de Telegram en la parte inferior derecha -->
+        <!-- Icono de Telegram para abrir el chat -->
         <div class="widget-telegram">
-            <script async src="https://telegram.org/js/telegram-widget.js?7"
-                data-telegram-login="Comfabot"
-                data-size="large"
-                data-auth-url="/auth"
-                data-request-access="write">
-            </script>
+            <button class="telegram-button" onclick="openTelegramChat()">
+                <i class="fab fa-telegram"></i>
+            </button>
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1
+        <div id="telegram-widget" style="display: none;">
+            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Comfabot"
+                data-size="large" data-auth-url="/auth" data-request-access="write"></script>
+        </div>
+
+        <script>
+            function openTelegramChat() {
+                var botUrl = "https://t.me/Comfabot";
+                window.open(botUrl, "popup", "width=400,height=600");
+            }
+
+            // Funcionalidad del carrusel
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            let currentSlide = 0;
+
+            // Botones de navegación
+            const nextButton = document.getElementById('nextButton');
+            const prevButton = document.getElementById('prevButton');
+
+            function updateSlidePosition() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            // Evento de clic para el botón "Siguiente"
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlidePosition();
+                resetInterval();  // Reinicia el temporizador al hacer clic
             });
-        });
-    </script>
+
+            // Evento de clic para el botón "Anterior"
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlidePosition();
+                resetInterval();  // Reinicia el temporizador al hacer clic
+            });
+
+            // Función para el desplazamiento automático
+            let autoSlideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlidePosition();
+            }, 3000);  // Cambia cada 3 segundos
+
+            // Función para reiniciar el intervalo (después de cada clic manual)
+            function resetInterval() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlidePosition();
+                }, 3000);
+            }
+
+            // JavaScript para alternar la visibilidad de las respuestas y los iconos
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    question.classList.toggle('active'); // Alternar la clase activa
+                    const answer = question.nextElementSibling; // Obtener la respuesta
+
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none"; // Ocultar respuesta
+                        question.querySelector('.faq-icon').textContent = "+"; // Cambiar a +
+                    } else {
+                        answer.style.display = "block"; // Mostrar respuesta
+                        question.querySelector('.faq-icon').textContent = "-"; // Cambiar a -
+                    }
+                });
+            });
+        </script>
+    </div>
 </body>
+
 </html>
