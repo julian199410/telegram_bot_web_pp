@@ -6,59 +6,60 @@ body {
     color: #333;
 }
 
-        /* Estilos para el carrusel */
-        .carousel {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+/* Estilos para el carrusel */
+.carousel {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 
-        .carousel-slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
 
-        .carousel-slide img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
+.carousel-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 
-        .carousel-content {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: white;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
+.carousel-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
 
-        .carousel-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
 
-        .carousel-button {
-            background-color: #10b3a0;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
+.carousel-button {
+    background-color: #10b3a0;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
 
-        .carousel-button:hover {
-            background-color: #004d40;
-        }
+.carousel-button:hover {
+    background-color: #004d40;
+}
 
+/* Sección de estadísticas */
 .statistics {
     display: flex;
     justify-content: space-around;
@@ -85,34 +86,7 @@ body {
     color: #555;
 }
 
-/* Estilos para el estadisticas */
-.statistics {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 0;
-    background-color: #f0f4f7;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-item i {
-    font-size: 40px;
-    color: #10b3a0;
-}
-
-.stat-item h3 {
-    font-size: 36px;
-    color: #333;
-}
-
-.stat-item p {
-    font-size: 18px;
-    color: #555;
-}
-
-/* Estilos para testimonios */
+/* Sección de testimonios */
 .testimonials {
     background-color: #ffffff;
     padding: 40px 20px;
@@ -135,7 +109,7 @@ body {
     margin-top: 10px;
 }
 
-/* Estilos para preguntas frecuentes */
+/* Sección de preguntas frecuentes (FAQ) */
 .faq {
     padding: 40px 0;
     background-color: #f9f9f9;
@@ -154,13 +128,13 @@ body {
     text-align: left;
     cursor: pointer;
     font-size: 18px;
-    display: flex; /* Flex para alinear icono y texto */
-    justify-content: space-between; /* Espaciado entre texto e icono */
-    align-items: center; /* Centrar verticalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .faq-icon {
-    font-size: 20px; /* Tamaño del icono */
+    font-size: 20px;
 }
 
 .faq-answer {
@@ -171,42 +145,14 @@ body {
 }
 
 .faq-question.active .faq-icon {
-    content: "-"; /* Cambiar icono a menos */
+    content: "-";
 }
 
 .faq-question.active + .faq-answer {
     display: block;
 }
 
-/* Estilos para el video educativo */
-.video {
-    text-align: center;
-    margin: 0px 0;
-}
-
-.video video {
-    border: 5px solid #10b3a0;
-}
-
-/* Estilos para el boton conoce más */
-.call-to-action {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.cta-button {
-    background-color: #10b3a0;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #004d40;
-}
-
+/* Sección de video educativo */
 .video {
     text-align: center;
     margin: 40px 0;
@@ -230,6 +176,26 @@ body {
     border: none;
 }
 
+/* Estilo para el botón "Conoce más" */
+.call-to-action {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-button {
+    background-color: #10b3a0;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #004d40;
+}
+
+/* Estilo del dashboard */
 .dashboard {
     max-width: 1450px;
     margin: 0 auto;
@@ -264,17 +230,9 @@ h1 {
     margin: 20px 0;
 }
 
-h1 br {
-    display: none;
-}
-
 @media (min-width: 768px) {
     h1 {
         font-size: 36px;
-    }
-
-    h1 br {
-        display: block;
     }
 }
 
@@ -291,7 +249,7 @@ h1 br {
     }
 }
 
-/* Menu lateral */
+/* Menú lateral */
 .sidebar {
     flex: 3;
     padding: 20px;
@@ -342,7 +300,7 @@ h1 br {
     color: #10b3a0;
 }
 
-/* Estilo para las tarjetas */
+/* Tarjetas */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -356,8 +314,7 @@ h1 br {
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    flex: 1 1 calc(33.33% - 20px);
-    /* 3 columnas en pantallas grandes */
+    flex: 1 1 calc(33.33% - 20px); /* 3 columnas en pantallas grandes */
 }
 
 .card img {
@@ -379,21 +336,19 @@ h1 br {
     color: #555;
 }
 
-/* Responsivo para tarjetas */
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 calc(50% - 20px);
-        /* 2 columnas en pantallas medianas */
+        flex: 1 1 calc(50% - 20px); /* 2 columnas en pantallas medianas */
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        flex: 1 1 100%;
-        /* 1 columna en pantallas pequeñas */
+        flex: 1 1 100%; /* 1 columna en pantallas pequeñas */
     }
 }
 
+/* Footer */
 footer {
     margin-top: 5px;
     text-align: center;
@@ -423,6 +378,7 @@ footer p {
     color: #078374;
 }
 
+/* Widget de Telegram */
 .widget-telegram {
     position: fixed;
     bottom: 20px;
@@ -442,23 +398,39 @@ footer p {
 }
 
 .telegram-button i {
-    /* color: #0088cc; */
-    color: #000000;
-    /* Color azul de Telegram */
+    color: #0088cc;
     font-size: 40px;
     transition: color 0.3s ease;
 }
 
 .telegram-button:hover i {
-    /* color: #005f8c; */
-    color: #0088cc;
-    /* Cambia el color al pasar el mouse */
+    color: #0070a8;
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .info {
         padding: 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 28px;
+    }
+
+    .stat-item p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 50px;
+    }
+
+    .telegram-button i {
+        font-size: 30px;
+    }
+
+    .statistics, .faq, .testimonials {
+        padding: 20px 10px;
     }
 
     .widget-telegram {
