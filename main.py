@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
+from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from fastapi.responses import RedirectResponse
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
@@ -50,9 +51,15 @@ async def blog_page(request: Request):
 async def galeria_page(request: Request):
     return templates.TemplateResponse("galeria.html", {"request": request})
 
+
 @app.get("/recursos", response_class=HTMLResponse)
 async def guia_recursos_page(request: Request):
     return templates.TemplateResponse("guia_recursos.html", {"request": request})
+
+
+@app.get("/foro", response_class=HTMLResponse)
+async def foro_page(request: Request):
+    return templates.TemplateResponse("foro_comunidad.html", {"request": request})
 
 
 @app.get("/auth")
