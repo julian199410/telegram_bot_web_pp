@@ -50,6 +50,10 @@ async def blog_page(request: Request):
 async def galeria_page(request: Request):
     return templates.TemplateResponse("galeria.html", {"request": request})
 
+@app.get("/recursos", response_class=HTMLResponse)
+async def guia_recursos_page(request: Request):
+    return templates.TemplateResponse("guia_recursos.html", {"request": request})
+
 
 @app.get("/auth")
 async def auth(request: Request):
