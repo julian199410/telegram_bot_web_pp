@@ -40,9 +40,15 @@ async def pediculosis_page(request: Request):
 async def parasitismo_page(request: Request):
     return templates.TemplateResponse("parasitismo.html", {"request": request})
 
+
 @app.get("/blog", response_class=HTMLResponse)
 async def blog_page(request: Request):
     return templates.TemplateResponse("blog.html", {"request": request})
+
+
+@app.get("/galeria", response_class=HTMLResponse)
+async def galeria_page(request: Request):
+    return templates.TemplateResponse("galeria.html", {"request": request})
 
 
 @app.get("/auth")
