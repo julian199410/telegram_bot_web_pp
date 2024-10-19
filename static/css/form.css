@@ -1,0 +1,55 @@
+/* Estilos generales para el formulario */
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilo para etiquetas */
+form label {
+    display: block; /* Mostrar las etiquetas en bloque */
+    margin-bottom: 8px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo para los campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio inferior */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el área de texto */
+form textarea {
+    resize: vertical; /* Permitir cambiar el tamaño verticalmente */
+}
+
+/* Estilo para el botón de envío */
+form button {
+    background-color: #00796b; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Relleno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor a mano */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+form button:hover {
+    background-color: #005f56; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo para mensajes de éxito/error */
+.form-message {
+    margin-top: 10px; /* Espacio superior */
+    font-size: 14px; /* Tamaño de fuente */
+}

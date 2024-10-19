@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Prevención</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Galería de Prevención</h1>
+        </header>
+
+        <div class="content">
+            <!-- Menú lateral -->
+            <nav class="sidebar">
+                <h2>Temas</h2>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/pediculosis">Pediculosis</a></li>
+                    <li><a href="/parasitismo">Parasitismo</a></li>
+                    <li><a href="/blog">Blog / Noticias</a></li>
+                    <li><a href="/galeria">Galería</a></li>
+                    <li><a href="/recursos">Guías y Recursos</a></li>
+                    <li><a href="/foro">Foro de la Comunidad</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/quiensomos">¿Quienes somos?</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contenido principal -->
+            <section class="main-content">
+                <h2>Galería de Imágenes</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="/static/images/parasitismo1.jpg" alt="Prevención 1">
+                        <div class="card-content">
+                            <h4>Prevención de Parásitos</h4>
+                            <p>Descripción breve de la imagen 1.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/static/images/parasitismo2.jpg" alt="Prevención 2">
+                        <div class="card-content">
+                            <h4>Higiene Personal</h4>
+                            <p>Descripción breve de la imagen 2.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/static/images/parasitismo3.jpg" alt="Prevención 3">
+                        <div class="card-content">
+                            <h4>Uso de Productos Antiparasitarios</h4>
+                            <p>Descripción breve de la imagen 3.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/static/images/pediculosis1.jpg" alt="Prevención 4">
+                        <div class="card-content">
+                            <h4>Prevención 4</h4>
+                            <p>Descripción breve de la imagen 4.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/static/images/pediculosis2.jpg" alt="Prevención 5">
+                        <div class="card-content">
+                            <h4>Prevención 5</h4>
+                            <p>Descripción breve de la imagen 5.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/static/images/pediculosis3.jpg" alt="Prevención 6">
+                        <div class="card-content">
+                            <h4>Prevención 6</h4>
+                            <p>Descripción breve de la imagen 6.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr> <!-- Línea separadora -->
+
+                <h2>Galería de Videos</h2>
+                <div class="video-container">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/W08Gzx9uzBc" title="Prevención 1"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h4>Video 1: Cómo prevenir la pediculosis</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/6lgsxA_camU" title="Prevención 2"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h4>Video 2: Consejos para evitar el parasitismo</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/xe4lZBHnpFk" title="Prevención 3"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h4>Video 3: Medidas de prevención generales</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>&copy; 2024 Pediculosis y Parasitismo. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </footer>
+
+        <!-- Icono de Telegram para abrir el chat -->
+        <div class="widget-telegram">
+            <button class="telegram-button" onclick="openTelegramChat()">
+                <i class="fab fa-telegram"></i>
+            </button>
+        </div>
+
+        <div id="telegram-widget" style="display: none;">
+            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Comfabot"
+                data-size="large" data-auth-url="/auth" data-request-access="write">
+            </script>
+        </div>
+
+        <script type="text/javascript">
+            function openTelegramChat() {
+                var botUrl = "https://t.me/Comfabot";
+                window.open(botUrl, "popup", "width=400,height=600");
+            }
+        </script>
+    </div>
+</body>
+
+</html>

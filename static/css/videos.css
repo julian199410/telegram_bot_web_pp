@@ -1,0 +1,17 @@
+        /* Estilos para la galería de imágenes y videos */
+        .card-container, .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Espacio entre tarjetas */
+            justify-content: space-between; /* Alinear las tarjetas */
+        }
+
+        .card, .video-item {
+            flex: 1 1 calc(33.33% - 20px); /* 3 tarjetas por fila */
+            box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
+        }
+
+        .video-item iframe {
+            width: 100%; /* Hacer que el iframe ocupe todo el ancho */
+            height: 200px; /* Altura fija para los videos */
+        }

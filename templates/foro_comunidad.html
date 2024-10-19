@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parasitismo</title>
+    <title>Foro de la Comunidad</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -37,54 +38,55 @@
 
             <!-- Contenido principal -->
             <section class="main-content">
-                <h2>¿Qué es el Parasitismo?</h2>
-                <p>El parasitismo es una relación entre dos organismos en la cual uno de ellos (el parásito) se
-                    beneficia a expensas del otro (el huésped). Los parásitos pueden causar una variedad de enfermedades
-                    en los seres humanos, afectando diferentes partes del cuerpo, como los intestinos, la piel, los
-                    pulmones y más.</p>
+                <h2>Foro de la Comunidad</h2>
+                <p>Bienvenido al foro de la comunidad sobre Pediculosis y Parasitismo. Aquí puedes compartir
+                    experiencias, hacer preguntas y encontrar respuestas sobre el cuidado y prevención de estos temas.
+                </p>
 
-                <h3>Tipos de Parásitos</h3>
-                <ul>
-                    <li><strong>Endoparásitos:</strong> Estos parásitos viven dentro del cuerpo del huésped, como los
-                        gusanos intestinales.</li>
-                    <li><strong>Ectoparásitos:</strong> Viven en la superficie del cuerpo, como los piojos y las pulgas.
-                    </li>
-                </ul>
-
-                <h3>Imágenes de Parásitos Comunes</h3>
-                <div class="card-container">
-                    <div class="card">
-                        <img src="/static/images/parasitismo1.jpg" alt="Imagen de un parásito intestinal">
-                        <div class="card-content">
-                            <h4>Parásito Intestinal</h4>
-                            <p>Descripción breve del parásito intestinal.</p>
-                        </div>
+                <h3>Temas de Discusión</h3>
+                <div class="discussion-topics">
+                    <div class="topic">
+                        <h4><a href="#">Prevención de la Pediculosis</a></h4>
+                        <p>Comparte tus consejos y experiencias sobre cómo prevenir la pediculosis.</p>
                     </div>
-                    <div class="card">
-                        <img src="/static/images/parasitismo2.jpg" alt="Imagen de un ectoparásito">
-                        <div class="card-content">
-                            <h4>Ectoparásito</h4>
-                            <p>Descripción breve del ectoparásito.</p>
-                        </div>
+                    <div class="topic">
+                        <h4><a href="#">Tratamientos Efectivos</a></h4>
+                        <p>Discute sobre los tratamientos que han funcionado para ti o tus seres queridos.</p>
                     </div>
-                    <div class="card">
-                        <img src="/static/images/parasitismo3.jpg" alt="Otro parásito">
-                        <div class="card-content">
-                            <h4>Otro Parásito</h4>
-                            <p>Descripción breve de otro parásito.</p>
-                        </div>
+                    <div class="topic">
+                        <h4><a href="#">Preguntas Frecuentes</a></h4>
+                        <p>Consulta las preguntas frecuentes sobre parasitismo y pediculosis y encuentra respuestas.</p>
                     </div>
                 </div>
 
-                <h3>Prevención del Parasitismo</h3>
-                <p>La prevención es clave para evitar infecciones parasitarias. Algunas medidas preventivas incluyen:
-                </p>
-                <ul>
-                    <li>Lavarse bien las manos antes de comer y después de ir al baño.</li>
-                    <li>Cocinar bien los alimentos, especialmente la carne.</li>
-                    <li>Evitar beber agua no potable o no tratada adecuadamente.</li>
-                    <li>Mantener una buena higiene personal y del hogar.</li>
-                </ul>
+                <h3>Preguntas Frecuentes</h3>
+                <div class="faq">
+                    <div class="faq-item">
+                        <h4>¿Qué es la pediculosis?</h4>
+                        <p>La pediculosis es una infestación por piojos que afecta principalmente al cuero cabelludo,
+                            pero también puede afectar el cuerpo y el vello púbico.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Cómo puedo prevenir la pediculosis?</h4>
+                        <p>La mejor manera de prevenir la pediculosis es evitar el contacto directo con personas
+                            infestadas y no compartir artículos personales como peines, gorros o toallas.</p>
+                    </div>
+                </div>
+
+                <h3>Contáctanos</h3>
+                <p>Si tienes preguntas o sugerencias, ¡no dudes en ponerte en contacto con nosotros!</p>
+                <form action="#" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
             </section>
         </div>
 
