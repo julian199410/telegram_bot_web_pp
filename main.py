@@ -62,6 +62,10 @@ async def foro_page(request: Request):
     return templates.TemplateResponse("foro_comunidad.html", {"request": request})
 
 
+@app.get("/contacto", response_class=HTMLResponse)
+async def contacto_page(request: Request):
+    return templates.TemplateResponse("contacto.html", {"request": request})
+
 @app.get("/auth")
 async def auth(request: Request):
     query_params = request.query_params
