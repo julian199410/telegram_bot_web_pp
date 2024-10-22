@@ -2,7 +2,8 @@ from fastapi import FastAPI, Request, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
-from fastapi.responses import RedirectResponse
+from fastapi.responses import RedirectResponse, JSONResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 from dotenv import load_dotenv
@@ -26,6 +27,16 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Configurar Jinja2Templates
 templates = Jinja2Templates(directory="templates")
 
+# Manejador de error 404 personalizado
+@app.exception_handler(StarletteHTTPException)
+async def custom_404_handler(request: Request, exc: StarletteHTTPException):
+    if exc.status_code == 404:
+        return templates.TemplateResponse(
+            "404.html", {"request": request, "message": "Página no encontrada"}, status_code=404
+        )
+    return JSONResponse(
+        status_code=exc.status_code, content={"detail": exc.detail}
+    )
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
