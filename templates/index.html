@@ -20,6 +20,13 @@
             <nav class="sidebar">
                 <h2>Temas</h2>
                 <ul>
+                                    <!-- Icono de Telegram para abrir en una nueva pestaña -->
+                    <div class="telegram-menu-item">
+                        <a href="https://t.me/Comfabot" target="_blank">
+                            <i class="fab fa-telegram"></i> Chat en Telegram
+                        </a>
+                    </div>
+                    <br>
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/pediculosis">Pediculosis</a></li>
                     <li><a href="/parasitismo">Parasitismo</a></li>
@@ -60,8 +67,6 @@
                     <button class="carousel-button" id="nextButton">Siguiente</button>
                 </div>
 
-
-
                 <h2 align="center">Estadísticas de prevención</h2>
                 <section class="statistics">
                     <div class="stat-item">
@@ -80,7 +85,6 @@
                         <p>Consultas atendidas</p>
                     </div>
                 </section>
-
 
                 <section class="testimonials">
                     <h2>Testimonios</h2>
@@ -138,7 +142,6 @@
             </section>
         </div>
 
-
         <!-- Pie de página -->
         <footer>
             <p>&copy; 2024 Pediculosis y Parasitismo. Todos los derechos reservados.</p>
@@ -150,24 +153,7 @@
             </div>
         </footer>
 
-        <!-- Icono de Telegram para abrir el chat -->
-        <div class="widget-telegram">
-            <button class="telegram-button" onclick="openTelegramChat()">
-                <i class="fab fa-telegram"></i>
-            </button>
-        </div>
-
-        <div id="telegram-widget" style="display: none;">
-            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Comfabot"
-                data-size="large" data-auth-url="/auth" data-request-access="write"></script>
-        </div>
-
         <script>
-            function openTelegramChat() {
-                var botUrl = "https://t.me/Comfabot";
-                window.open(botUrl, "popup", "width=400,height=600");
-            }
-
             // Funcionalidad del carrusel
             const track = document.querySelector('.carousel-track');
             const slides = Array.from(track.children);
